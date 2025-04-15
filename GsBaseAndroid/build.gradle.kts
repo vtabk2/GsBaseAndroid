@@ -1,20 +1,15 @@
 plugins {
-    alias(libs.plugins.android.application)
+    alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
-
-    id("com.google.devtools.ksp")
+    id("maven-publish")
 }
 
 android {
-    namespace = "com.example.gsbaseandroid"
+    namespace = "com.core.gsbaseandroid"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.gsbaseandroid"
         minSdk = 21
-        targetSdk = 34
-        versionCode = 1
-        versionName = "1.0.0"
     }
 
     buildTypes {
@@ -22,6 +17,10 @@ android {
             isMinifyEnabled = false
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
+    }
+
+    buildFeatures {
+        viewBinding = true
     }
 
     compileOptions {
@@ -34,11 +33,18 @@ android {
     }
 }
 
+publishing {
+    publications {
+        register<MavenPublication>("release") {
+            afterEvaluate{
+                from(components["release"])
+            }
+        }
+    }
+}
+
 dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
-    implementation(libs.androidx.constraintlayout)
-
-    implementation(project(":GsBaseAndroid"))
 }

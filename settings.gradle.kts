@@ -22,4 +22,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "GsBaseAndroid"
 include(":app")
- 
+include(":GsBaseAndroid")
