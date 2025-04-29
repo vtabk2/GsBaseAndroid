@@ -1,4 +1,4 @@
-package com.core.gsbaseandroid.local.store
+package com.core.gsbaseandroid.locale.store
 
 import java.util.Locale
 

@@ -1,7 +1,6 @@
-package com.core.gsbaseandroid.local.store
+package com.core.gsbaseandroid.locale.store
 
 import android.content.Context
-import com.core.gsbaseandroid.local.store.LocaleStore
 import org.json.JSONObject
 import java.util.Locale
 

@@ -1,4 +1,4 @@
-package com.core.gsbaseandroid.local
+package com.core.gsbaseandroid.locale
 
 import android.annotation.SuppressLint
 import android.app.Activity
@@ -9,8 +9,8 @@ import android.content.res.Resources
 import android.os.Build
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.os.LocaleListCompat
-import com.core.gsbaseandroid.local.store.LocaleStore
-import com.core.gsbaseandroid.local.store.PreferenceLocaleStore
+import com.core.gsbaseandroid.locale.store.LocaleStore
+import com.core.gsbaseandroid.locale.store.PreferenceLocaleStore
 import java.util.Locale
 
 /**

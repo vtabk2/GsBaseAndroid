@@ -1,4 +1,4 @@
-package com.core.gsbaseandroid.local
+package com.core.gsbaseandroid.locale
 
 import android.app.Activity
 import android.app.Application.ActivityLifecycleCallbacks

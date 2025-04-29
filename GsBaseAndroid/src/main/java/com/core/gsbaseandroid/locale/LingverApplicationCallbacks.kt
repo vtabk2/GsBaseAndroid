@@ -1,4 +1,4 @@
-package com.core.gsbaseandroid.local
+package com.core.gsbaseandroid.locale
 
 import android.content.ComponentCallbacks
 import android.content.res.Configuration
