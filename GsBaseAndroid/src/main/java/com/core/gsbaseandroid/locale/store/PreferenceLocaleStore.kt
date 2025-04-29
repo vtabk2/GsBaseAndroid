@@ -3,6 +3,7 @@ package com.core.gsbaseandroid.locale.store
 import android.content.Context
 import org.json.JSONObject
 import java.util.Locale
+import androidx.core.content.edit
 
 class PreferenceLocaleStore @JvmOverloads constructor(
     context: Context,
@@ -31,11 +32,11 @@ class PreferenceLocaleStore @JvmOverloads constructor(
             put(COUNTRY_JSON_KEY, locale.country)
             put(VARIANT_JSON_KEY, locale.variant)
         }
-        prefs.edit().putString(LANGUAGE_KEY, json.toString()).apply()
+        prefs.edit { putString(LANGUAGE_KEY, json.toString()) }
     }
 
     override fun setFollowSystemLocale(value: Boolean) {
-        prefs.edit().putBoolean(FOLLOW_SYSTEM_LOCALE_KEY, value).apply()
+        prefs.edit { putBoolean(FOLLOW_SYSTEM_LOCALE_KEY, value) }
     }
 
     override fun isFollowingSystemLocale(): Boolean {
