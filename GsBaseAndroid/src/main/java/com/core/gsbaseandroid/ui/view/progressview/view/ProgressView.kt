@@ -545,7 +545,7 @@ class ProgressView : FrameLayout {
     }
 
     private inline fun setLabelViewPosition(position: Float, crossinline action: () -> Unit = {}) {
-//        if (position < 0) return
+        if (position < 0) return
         if (this.labelConstraints == ProgressLabelConstraints.ALIGN_PROGRESS) {
             action()
             if (isVertical()) {
