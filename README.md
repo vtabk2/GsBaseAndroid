@@ -16,7 +16,7 @@
 **Step 2.** Add the dependency
 ```css
         dependencies {
-                    implementation 'com.github.vtabk2:GsBaseAndroid:1.0.2'
+                    implementation 'com.github.vtabk2:GsBaseAndroid:1.0.3'
             }
 ```
 
